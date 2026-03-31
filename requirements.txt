@@ -1,0 +1,19 @@
+# ══════════════════════════════════════════════════
+#  TPV ULTRA SMART — Dependencias
+# ══════════════════════════════════════════════════
+#
+#  INSTALACIÓN EN PYDROID 3 (terminal):
+#    pip install flask
+#    pip install kivy       ← solo si compilas APK
+#
+#  INSTALACIÓN EN PC (Linux/WSL):
+#    pip install -r requirements.txt
+# ══════════════════════════════════════════════════
+
+# Servidor web
+flask>=2.0.0
+
+# Para compilar APK (solo en Linux/WSL con buildozer)
+# kivy>=2.1.0
+# buildozer>=1.5.0
+# cython>=0.29.0
