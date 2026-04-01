@@ -4221,7 +4221,7 @@
             } catch (error) {
                 console.error('❌ Error en exportación:', error);
                 const errorMsg = error.message || 'Error desconocido';
-                showToast('❌ Error al exportar: ' + errorMsg, 'danger', 5000);
+                showToast('❌ Error al exportar: ' + errorMsg, 'danger', 5050);
                 return false;
             }
         }

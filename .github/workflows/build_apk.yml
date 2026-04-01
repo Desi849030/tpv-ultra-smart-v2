@@ -40,9 +40,9 @@ jobs:
         path: |
           ~/.buildozer
           ~/.cache/pip
-        key: ${{ runner.os }}-buildozer-v3-${{ hashFiles('buildozer.spec') }}
+        key: ${{ runner.os }}-buildozer-v8-${{ hashFiles('buildozer.spec') }}
         restore-keys: |
-          ${{ runner.os }}-buildozer-
+          ${{ runner.os }}-buildozer-v8-
 
     - name: Setup Android SDK
       run: |
@@ -61,12 +61,6 @@ jobs:
           sdkmanager --sdk_root=$SDK "build-tools;33.0.2" "platforms;android-33"
         fi
 
-    - name: Configure Buildozer
-      run: |
-        if [ -f buildozer.spec ]; then
-          echo "android.uses_cleartext_traffic = True" >> buildozer.spec
-        fi
-
     - name: Build APK
       run: |
         buildozer android debug
@@ -77,4 +71,3 @@ jobs:
         name: TPV-Ultra-Smart-V2-APK
         path: bin/*.apk
         retention-days: 30
-# Fixed empty file issue

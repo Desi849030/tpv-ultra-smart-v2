@@ -9,7 +9,7 @@ from functools import wraps
 from datetime import datetime
 import uuid, base64, os
 
-from backend.database import (
+from database import (
     obtener_conexion, agregar_log,
     _hash_password, verificar_password
 )
@@ -401,7 +401,7 @@ def api_generar_qr_productos():
     """
     datos       = request.get_json(force=True, silent=True) or {}
     ids         = datos.get('producto_ids', [])[:40]   # máx 40
-    base_url    = datos.get('base_url', 'http://localhost:8080/tienda/producto')
+    base_url    = datos.get('base_url', 'http://localhost:5050/tienda/producto')
 
     try:
         import qrcode

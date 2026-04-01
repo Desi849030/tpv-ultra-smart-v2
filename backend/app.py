@@ -95,7 +95,7 @@ import supabase_sync as _sb
 from tienda_routes import tienda_bp, crear_tablas_tienda
 
 # ── Carpeta del proyecto — detectada automáticamente ─────────
-_CARPETA = '/storage/emulated/0/TPV_APK'
+_CARPETA = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Sin static_folder ni template_folder — Flask NO busca carpetas especiales.
 # Los archivos se leen directamente con open() desde _CARPETA.
 app = Flask(__name__, static_folder=None)
@@ -1095,7 +1095,7 @@ def error_500(e):
 # ══════════════════════════════════════════════════════════════
 def abrir_navegador():
     time.sleep(1.5)
-    try: webbrowser.open("http://localhost:8080")
+    try: webbrowser.open("http://localhost:5050")
     except: pass
 
 def main():
@@ -1108,7 +1108,7 @@ def main():
     if estado:
         print(f" {len(estado.get('productos',[]))} productos | {len(estado.get('historialVentas',[]))} ventas")
     print(f" Supabase: {'✅ Activo' if _sb.SUPABASE_OK else '⚠️  Solo local'}")
-    print(" Servidor: http://localhost:8080")
+    print(" Servidor: http://localhost:5050")
     print(" Login:    desarrollador / dev2024\n")
     threading.Thread(target=abrir_navegador, daemon=True).start()
 
@@ -1126,13 +1126,13 @@ def main():
         ]))
         print("\n" + "="*48)
         print("  TPV ULTRA SMART v6.0 - Servidor activo")
-        print("  Local : http://localhost:8080")
+        print("  Local : http://localhost:5050")
         for ip in ips:
-            print(f"  WiFi  : http://{ip}:8080")
+            print(f"  WiFi  : http://{ip}:5050")
         print("="*48 + "\n")
     except Exception:
         pass
-    app.run(host="0.0.0.0", port=8080, debug=False, use_reloader=False)
+    app.run(host="0.0.0.0", port=5050, debug=False, use_reloader=False)
 
 
 

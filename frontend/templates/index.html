@@ -1049,7 +1049,7 @@
             CONFIG: {
                 development: {
                     debugMode: true,
-                    autoCheckLicenseInterval: 5000,
+                    autoCheckLicenseInterval: 5050,
                     showDetailedErrors: true,
                     allowLicenseBypass: false
                 },
@@ -5629,7 +5629,7 @@
             } catch (error) {
                 console.error('❌ Error en exportación:', error);
                 const errorMsg = error.message || 'Error desconocido';
-                showToast('❌ Error al exportar: ' + errorMsg, 'danger', 5000);
+                showToast('❌ Error al exportar: ' + errorMsg, 'danger', 5050);
                 return false;
             }
         }
@@ -9883,7 +9883,7 @@ function _iniciarPolling() {
             // Si SSE falla, fallback a polling cada 15 s
             if (_sseConn) { _sseConn.close(); _sseConn = null; }
             if (!AUTH.pollingNotif) {
-                AUTH.pollingNotif = setInterval(_pollPedidos, 15000);
+                AUTH.pollingNotif = setInterval(_pollPedidos, 15050);
                 _pollPedidos();
             }
         };

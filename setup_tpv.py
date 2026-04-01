@@ -497,4 +497,4 @@ for item in sorted(os.listdir(BASE)):
 print()
 print('Siguiente paso:')
 print('  Abre backend/app.py en Pydroid y ejecuta con Play')
-print('  Luego abre en Chrome: http://localhost:5000')
+print('  Luego abre en Chrome: http://localhost:5050')

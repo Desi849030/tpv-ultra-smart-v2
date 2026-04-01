@@ -19,6 +19,7 @@ fullscreen = 0
 android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 android.request_legacy_external_storage = True
 android.uses_cleartext_traffic = True
+android.res_dirs = res/
 
 android.minapi = 21
 android.api = 33
