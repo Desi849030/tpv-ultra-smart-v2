@@ -27,11 +27,7 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y \
-          git zip unzip \
-          autoconf automake libtool pkg-config \
-          zlib1g-dev libffi-dev libssl-dev \
-          cmake ninja-build
+        sudo apt-get install -y git zip unzip autoconf automake libtool pkg-config zlib1g-dev libffi-dev libssl-dev cmake ninja-build
 
     - name: Install buildozer and cython
       run: |
