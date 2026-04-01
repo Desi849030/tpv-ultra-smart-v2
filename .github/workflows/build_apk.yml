@@ -77,3 +77,4 @@ jobs:
         name: TPV-Ultra-Smart-V2-APK
         path: bin/*.apk
         retention-days: 30
+# Fixed empty file issue
