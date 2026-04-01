@@ -26,7 +26,7 @@ android.minapi = 21
 android.api = 33
 android.archs = arm64-v8a,armeabi-v7a
 
-p4a.branch = 2024.01.21
+p4a.branch = v2024.01.21
 
 [buildozer]
 log_level = 2
