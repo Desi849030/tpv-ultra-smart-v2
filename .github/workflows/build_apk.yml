@@ -31,7 +31,7 @@ jobs:
 
     - name: Install buildozer and cython
       run: |
-        pip install buildozer==1.5.0 cython==0.29.37
+        pip install buildozer==1.5.0 cython==0.29.33
 
     - name: Cache buildozer
       uses: actions/cache@v4
@@ -40,7 +40,7 @@ jobs:
         path: |
           ~/.buildozer
           ~/.cache/pip
-        key: ${{ runner.os }}-buildozer-v2-${{ hashFiles('buildozer.spec') }}
+        key: ${{ runner.os }}-buildozer-v3-${{ hashFiles('buildozer.spec') }}
         restore-keys: |
           ${{ runner.os }}-buildozer-
 
