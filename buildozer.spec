@@ -21,7 +21,6 @@ fullscreen = 0
 
 android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 android.request_legacy_external_storage = True
-android.extra_manifest_application_arguments = android:networkSecurityConfig="@xml/network_security_config"
 
 android.minapi = 21
 android.api = 33
@@ -34,3 +33,4 @@ log_level = 2
 warn_on_root = 1
 
 android_uses_cleartext_traffic = True
+android.res_dirs = res/
