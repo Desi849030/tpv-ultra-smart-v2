@@ -14,7 +14,7 @@ source.include_patterns = frontend/**,backend/**,database/**,config/**,logs/**
 
 source.exclude_patterns = .buildozer/*,bin/*,*.pyc,__pycache__/*,compilacion/*,*.backup
 
-requirements = python3,kivy==2.3.0,flask==2.2.5,werkzeug==2.2.3,requests,urllib3,pyjnius
+requirements = python3,kivy==2.3.0,flask==2.2.5,werkzeug==2.2.3,requests,urllib3
 
 orientation = portrait
 fullscreen = 0
