@@ -4,15 +4,6 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-    inputs:
-      create_zip:
-        description: 'Crear y subir ZIP del código fuente'
-        required: false
-        default: 'false'
-        type: choice
-        options:
-        - 'true'
-        - 'false'
 
 jobs:
   build:
@@ -89,18 +80,4 @@ jobs:
       with:
         name: TPV-Ultra-Smart-V2-APK
         path: bin/*.apk
-        retention-days: 30
-
-    - name: Create and Upload ZIP Source
-      if: github.event.inputs.create_zip == 'true' || github.event_name == 'push'
-      run: |
-        zip -r source_code.zip . -x "*.git*" "bin/*" ".buildozer/*"
-      # Nota: En el paso siguiente subimos este zip
-
-    - name: Upload ZIP Artifact
-      if: github.event.inputs.create_zip == 'true' || github.event_name == 'push'
-      uses: actions/upload-artifact@v4
-      with:
-        name: TPV-Source-Code-ZIP
-        path: source_code.zip
         retention-days: 30
