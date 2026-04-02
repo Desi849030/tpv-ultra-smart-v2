@@ -61,6 +61,9 @@ jobs:
           sdkmanager --sdk_root=$SDK "build-tools;33.0.2" "platforms;android-33"
         fi
 
+    - name: Remove pyc files
+      run: find . -name "*.pyc" -delete
+
     - name: Build APK
       run: |
         buildozer android debug
