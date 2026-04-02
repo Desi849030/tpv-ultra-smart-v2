@@ -11,7 +11,7 @@ source.include_exts = py,png,jpg,jpeg,json,html,css,js,xml,ttf,woff,woff2
 source.include_patterns = frontend/**,backend/**,config/**
 source.exclude_patterns = .buildozer/*,bin/*,*.pyc,__pycache__/*,compilacion/*
 
-requirements = python3,kivy==2.2.1,flask==2.2.5,werkzeug==2.2.3,requests,urllib3
+requirements = python3,flask==2.2.5,werkzeug==2.2.3,requests,urllib3
 
 orientation = portrait
 fullscreen = 0
@@ -25,6 +25,7 @@ android.minapi = 21
 android.api = 33
 android.archs = arm64-v8a,armeabi-v7a
 
+p4a.bootstrap = webview
 p4a.branch = v2024.01.21
 
 [buildozer]

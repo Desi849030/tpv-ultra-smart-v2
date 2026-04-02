@@ -22,13 +22,7 @@ def start_flask():
             f.write(str(e)+"\n"+traceback.format_exc())
 
 threading.Thread(target=start_flask, daemon=True).start()
+time.sleep(3)
 
-from kivy.app import App
-from kivy.uix.webview import WebView
-
-class TPVApp(App):
-    def build(self):
-        time.sleep(2)
-        return WebView(url="http://127.0.0.1:5050")
-
-TPVApp().run()
+def main(url):
+    return "http://127.0.0.1:5050"

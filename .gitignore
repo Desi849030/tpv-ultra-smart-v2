@@ -1,0 +1,10 @@
+*.pyc
+*.pyo
+__pycache__/
+.buildozer/
+bin/
+*.backup
+compilacion/
+.kivy/
+tpv_datos.db
+*.log
