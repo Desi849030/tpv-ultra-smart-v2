@@ -64,8 +64,6 @@ jobs:
     - name: Remove pyc files
       run: find . -name "*.pyc" -delete
 
-    - name: Remove pyc files
-      run: find . -name "*.pyc" -delete
 
     - name: Build APK
       run: |

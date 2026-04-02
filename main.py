@@ -43,12 +43,13 @@ p{font-size:14px}
 <p>Iniciando servidor...</p>
 </body></html>"""
             self.send_response(200)
-            self.send_header("Content-Type", "text/html")
+            self.send_header("Content-Type","text/html")
             self.end_headers()
             self.wfile.write(html)
 
-def start_loading_server():
-    HTTPServer(("127.0.0.1", 5049), LoadingHandler).serve_forever()
+# Arrancar servidor sincrónicamente
+_server = HTTPServer(("127.0.0.1", 5049), LoadingHandler)
+threading.Thread(target=_server.serve_forever, daemon=True).start()
 
 def start_flask():
     global FLASK_READY
@@ -64,9 +65,7 @@ def start_flask():
                 f.write(str(e) + "\n" + traceback.format_exc())
         except: pass
 
-threading.Thread(target=start_loading_server, daemon=True).start()
 threading.Thread(target=start_flask, daemon=True).start()
-time.sleep(1)
 
 def main(url):
     return "http://127.0.0.1:5049"
