@@ -48,7 +48,7 @@ p{font-size:14px}
             self.wfile.write(html)
 
 # Arrancar servidor sincrónicamente
-_server = HTTPServer(("127.0.0.1", 5049), LoadingHandler)
+_server = HTTPServer(("127.0.0.1", 8080), LoadingHandler)
 threading.Thread(target=_server.serve_forever, daemon=True).start()
 
 def start_flask():
@@ -68,4 +68,4 @@ def start_flask():
 threading.Thread(target=start_flask, daemon=True).start()
 
 def main(url):
-    return "http://127.0.0.1:5049"
+    return "http://127.0.0.1:8080"

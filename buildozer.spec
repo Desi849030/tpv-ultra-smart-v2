@@ -16,7 +16,7 @@ requirements = python3,flask==2.2.5,werkzeug==2.2.3,requests,urllib3
 orientation = portrait
 fullscreen = 0
 
-android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
+android.permissions = INTERNET,ACCESS_NETWORK_STATE,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 android.request_legacy_external_storage = True
 android.uses_cleartext_traffic = True
 android.res_dirs = res/
