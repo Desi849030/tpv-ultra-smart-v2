@@ -1110,7 +1110,7 @@ def main():
     print(f" Supabase: {'✅ Activo' if _sb.SUPABASE_OK else '⚠️  Solo local'}")
     print(" Servidor: http://localhost:5050")
     print(" Login:    desarrollador / dev2024\n")
-    threading.Thread(target=abrir_navegador, daemon=True).start()
+    #threading.Thread(target=abrir_navegador, daemon=True).start()
 
     # Suprimir el WARNING rojo de Werkzeug (servidor de desarrollo)
     import logging
@@ -1132,7 +1132,7 @@ def main():
         print("="*48 + "\n")
     except Exception:
         pass
-    app.run(host="0.0.0.0", port=5050, debug=False, use_reloader=False)
+    app.run(host="127.0.0.1", port=5050, debug=False, use_reloader=False)
 
 
 
